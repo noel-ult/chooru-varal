@@ -50,15 +50,12 @@ Open `http://localhost:3000`. The **Try Demo** path uses predefined hand data an
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots
 ![Screenshot 1](public/docs/screenshot-landing.png)
-*Landing page: the unnecessary research proposition is introduced.*
+*Landing page: begin a personal choru-and-vaari motion study or launch the local demo.*
 
-![Screenshot 2](public/docs/screenshot-hand.png)
-*Hand measurement: landmark calibration overlays the mirrored camera feed.*
-
-![Screenshot 3](public/docs/screenshot-result.png)
-*Result: capacity, estimated choru and final vaari verdict.*
+![Screenshot 2](public/docs/screenshot-result.png)
+*Vaari Intelligence report: recorded trajectory map, motion profile, choru estimate and interactive experiment deck.*
 
 # Diagrams
 ![Workflow](public/docs/workflow.svg)

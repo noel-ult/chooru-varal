@@ -1,0 +1,1 @@
+export function calculateVaaris(rice:number, capacity:number){ const value=rice/capacity; const rounded=Number(value.toFixed(2)); const verdict=value<1.2?"Oru vaari mathi.":value<2.2?"Rand vaari edukkaam.":value<3.4?`${Math.round(value)} vaari edukkaam.`:value<5?"Nalla vaari aanu.":value<7?"Vaari Master.":"Ithrem choru enthina?"; return { value:rounded, verdict }; }

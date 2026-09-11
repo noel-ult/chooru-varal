@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--coral:#ff5a57;--rose:#db7791;--olive:#3a4239;--peach:#ffb8a6;--teal:#075a6d;--plum:#80536e;--aqua:#16b6c9;--violet:#7972ae;--slate:#8e8b86;--apricot:#ff8f58;--ink:#303630;--paper:#fffdf9}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #16b6c9;outline-offset:3px}::selection{background:#ffb8a6;color:#303630}
+.grid-bg{background-color:#fffdf9;background-image:radial-gradient(circle at 92% 8%,rgba(255,184,166,.35),transparent 24rem),radial-gradient(circle at 6% 90%,rgba(22,182,201,.18),transparent 24rem),linear-gradient(rgba(128,83,110,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(128,83,110,.055) 1px,transparent 1px);background-size:auto,auto,32px 32px,32px 32px}.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:900;color:#075a6d}.panel{border:1px solid rgba(58,66,57,.18);background:rgba(255,255,255,.86);box-shadow:0 16px 42px rgba(58,66,57,.11)}.dot{display:inline-block;width:8px;height:8px;border-radius:999px;background:#16b6c9;box-shadow:0 0 0 4px rgba(22,182,201,.18)}
+.gradient-coral{background:linear-gradient(180deg,#ffb8a6,#ff5a57)}.gradient-data{background:linear-gradient(180deg,#9edce3,#16b6c9)}.gradient-deep{background:linear-gradient(180deg,#7972ae,#376e91)}

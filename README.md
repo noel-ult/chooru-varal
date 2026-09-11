@@ -46,12 +46,6 @@ npm run dev
 
 Open `http://localhost:3000`. The **Try Demo** path uses predefined hand data and a local sample plate image.
 
-### Dokploy Deployment
-
-The repository includes a production [Dockerfile](Dockerfile) using Next.js standalone output.
-
-In Dokploy, create an application from this repository, select **Dockerfile** as the build type, expose port `3000`, and deploy. No environment variables are required for the default local-only experience.
-
 ### Project Documentation
 For Software:
 

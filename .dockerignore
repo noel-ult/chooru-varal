@@ -1,9 +1,0 @@
-node_modules
-.next
-.next-build
-.git
-.gitignore
-*.tsbuildinfo
-npm-debug.log*
-README.md
-.env*

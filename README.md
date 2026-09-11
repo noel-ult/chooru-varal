@@ -4,11 +4,11 @@
 
 ## Basic Details
 ### Team Name
-[Add team name]
+DIVA
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
+- Team Lead: Noel Biju - Sahrdaya College of Engineering and Technology
+- Member 2: Samuel Thomas C - Sahrdaya College of Engineering and Technology
 
 ### Project Description
 Choru Vaari Kodukkam estimates a personal rice-handful capacity from hand landmarks, then estimates the quantity of choru in a plate image and expresses it in vaaris.
@@ -69,8 +69,8 @@ For Software:
 - Use the in-app **Try Demo** button for a local sample run.
 
 ## Team Contributions
-- [Name 1]: Hand tracking, vaari estimation, frontend
-- [Name 2]: Rice image analysis, UI, testing
+- Noel Biju : Hand tracking, vaari estimation, frontend
+- Samuel Thomas C : Rice image analysis, UI, testing
 
 ---
 Made with ❤️ at TinkerHub Useless Projects

@@ -9,7 +9,6 @@
 ### Team Members
 - Team Lead: [Name] - [College]
 - Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
 
 ### Project Description
 Choru Vaari Kodukkam estimates a personal rice-handful capacity from hand landmarks, then estimates the quantity of choru in a plate image and expresses it in vaaris.
@@ -72,7 +71,6 @@ For Software:
 ## Team Contributions
 - [Name 1]: Hand tracking, vaari estimation, frontend
 - [Name 2]: Rice image analysis, UI, testing
-- [Name 3]: Demo preparation and documentation
 
 ---
 Made with ❤️ at TinkerHub Useless Projects

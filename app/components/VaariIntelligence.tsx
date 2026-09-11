@@ -353,10 +353,11 @@ function Sadya({
   vaari: number;
   count: number;
 }) {
-  const [view, setView] = useState<"map" | "plan">("map"),
+  const [view, setView] = useState<"map" | "model" | "plan">("map"),
     [reserve, setReserve] = useState(true),
     [highlight, setHighlight] = useState<"rice" | "other" | "free">("rice"),
-    [simulatedVaaris, setSimulatedVaaris] = useState(0);
+    [simulatedVaaris, setSimulatedVaaris] = useState(0),
+    [tilt, setTilt] = useState(0);
   const occupancy = Math.min(96, Math.round(42 + count * 7 + simulatedVaaris * 11)),
     free = 100 - occupancy,
     other = Math.round(occupancy * 0.43),
@@ -379,6 +380,12 @@ function Sadya({
           className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "map" ? "bg-[#050505] text-white" : "border"}`}
         >
           SURFACE MAP
+        </button>
+        <button
+          onClick={() => setView("model")}
+          className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "model" ? "bg-[#050505] text-white" : "border"}`}
+        >
+          3D INSPECT
         </button>
         <button
           onClick={() => setView("plan")}
@@ -447,6 +454,21 @@ function Sadya({
             <div className="mt-3 flex items-center gap-2 text-xs"><span className="grid h-7 w-7 place-items-center rounded-full bg-[#128EEF] font-black text-[#050505]">{simulatedVaaris}</span><span>{simulatedVaaris===0?"Leaf is waiting patiently.":simulatedVaaris===1?"One extra vaari: still socially acceptable.":simulatedVaaris===2?"Choru load is becoming a decision.":"Maximum simulated commitment reached."}</span></div>
           </div>
         </>
+      ) : view === "model" ? (
+        <div className="rounded-2xl border-2 border-[#050505] bg-[#f8f8f8] p-4">
+          <div className="flex items-center justify-between"><p className="eyebrow">INTERACTIVE SERVING SURFACE</p><span className="rounded-full bg-[#128EEF] px-2 py-1 text-[9px] font-black text-white">HEURISTIC 3D</span></div>
+          <div className="mt-4 grid gap-5 md:grid-cols-[1fr_150px]">
+            <div className="relative h-56 overflow-hidden rounded-xl bg-[#dcecf7]" style={{perspective:"700px"}}>
+              <div className="absolute left-[12%] top-[18%] h-[62%] w-[76%] rounded-[48%_52%_45%_55%] border-2 border-[#075A6D] bg-[#65AC9C] shadow-[0_18px_18px_rgba(5,5,5,.25)] transition-transform duration-300" style={{transform:`rotateX(58deg) rotateZ(${tilt}deg)`,transformStyle:"preserve-3d"}}>
+                <button aria-label="Inspect rice region" onClick={()=>setHighlight("rice")} className={`absolute left-[31%] top-[29%] h-[46%] w-[40%] rounded-[48%] border-2 bg-[#FFFDF9] shadow-[0_8px_0_rgba(5,5,5,.18)] ${highlight==="rice"?"border-[#F5009F]":"border-[#128EEF]"}`} style={{transform:"translateZ(14px)"}}/>
+                <button aria-label="Inspect other food region" onClick={()=>setHighlight("other")} className={`absolute right-[11%] top-[19%] h-8 w-8 rounded-full bg-[#F5009F] ${highlight==="other"?"ring-4 ring-white":""}`} style={{transform:"translateZ(19px)"}}/>
+                <button aria-label="Inspect free pappadam area" onClick={()=>setHighlight("free")} className={`absolute bottom-[13%] left-[12%] h-5 w-12 rounded-full bg-[#FFD500] ${highlight==="free"?"ring-4 ring-white":""}`} style={{transform:"translateZ(11px)"}}/>
+              </div>
+              <span className="absolute bottom-3 left-3 text-[9px] font-bold tracking-widest text-[#075A6D]">DRAG-FREE ROTATION · CLICK A REGION</span>
+            </div>
+            <div className="text-xs"><b className="text-[#075A6D]">{highlight.toUpperCase()} REGION</b><p className="mt-2">{selected}% of analyzed surface.</p><label className="mt-6 block font-bold">ROTATE LEAF<input aria-label="Rotate serving surface" className="mt-3 w-full accent-[#F5009F]" type="range" min="-18" max="18" value={tilt} onChange={event=>setTilt(+event.target.value)}/></label><button onClick={()=>setTilt(0)} className="mt-3 text-[10px] font-black text-[#F5009F]">RESET VIEW ↺</button></div>
+          </div>
+        </div>
       ) : (
         <div className="rounded-xl bg-[#F8F8F8] p-4 text-xs">
           <p className="eyebrow">SADHYA PLAN · YOUR {vaari}G VAARI</p>

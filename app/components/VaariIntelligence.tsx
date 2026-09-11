@@ -64,8 +64,8 @@ export function VaariIntelligence({
         </h2>
       </header>
       <div className="mt-8 grid gap-5 lg:grid-cols-2">
-        <div className="rounded-[2rem] bg-[#303630] p-7 text-white">
-          <p className="text-xs font-bold tracking-[.2em] text-[#FFB8A6]">
+        <div className="rounded-[2rem] bg-[#050505] p-7 text-white">
+          <p className="text-xs font-bold tracking-[.2em] text-[#F5009F]">
             YOUR VAARI PROFILE
           </p>
           <div className="mt-2 text-6xl font-black">
@@ -83,7 +83,7 @@ export function VaariIntelligence({
           <p className="eyebrow">YOUR CHORU</p>
           <div className="mt-2 text-5xl font-black">{rice} g</div>
           <b className="mt-3 block text-xl">≈ {count.toFixed(2)} VAARIS</b>
-          <div className="mt-6 flex gap-1 text-[#FFB8A6]">
+          <div className="mt-6 flex gap-1 text-[#F5009F]">
             {Array.from({ length: Math.ceil(count) }, (_, i) => (
               <span
                 key={i}
@@ -118,7 +118,7 @@ export function VaariIntelligence({
         <div>
           <div className="panel rounded-3xl p-6">
             <p className="eyebrow">RICE EXPERIMENTS</p>
-            <p className="mt-2 text-sm text-[#075A6D]">
+            <p className="mt-2 text-sm text-[#050505]">
               What should we do with your choru?
             </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -126,21 +126,21 @@ export function VaariIntelligence({
                 <button
                   key={id}
                   onClick={() => setActive(id)}
-                  className={`group min-h-36 rounded-2xl border p-4 text-left transition hover:-translate-y-0.5 ${active === id ? "border-[#7972AE] bg-[#FFFDF9] shadow-[4px_4px_0_#7972AE]" : "border-[#d8d1c7] bg-white hover:border-[#075A6D] hover:shadow-[3px_3px_0_#FFB8A6]"}`}
+                  className={`group min-h-36 rounded-2xl border p-4 text-left transition hover:-translate-y-0.5 ${active === id ? "border-[#128EEF] bg-[#F8F8F8] shadow-[4px_4px_0_#128EEF]" : "border-[#d8d1c7] bg-white hover:border-[#050505] hover:shadow-[3px_3px_0_#F5009F]"}`}
                 >
                   <span className="flex items-start justify-between">
                     <b className="block max-w-[11rem] text-sm leading-tight">
                       {title}
                     </b>
-                    <i className="grid h-7 w-7 place-items-center rounded-full bg-[#FFFDF9] text-base not-italic text-[#075A6D]">
+                    <i className="grid h-7 w-7 place-items-center rounded-full bg-[#F8F8F8] text-base not-italic text-[#050505]">
                       {icon}
                     </i>
                   </span>
-                  <span className="mt-5 block text-base font-black text-[#7972AE]">
+                  <span className="mt-5 block text-base font-black text-[#128EEF]">
                     {detail}
                   </span>
                   <span className="mt-1 block text-[10px] text-[#6e716a]">
-                    {hint} <i className="not-italic text-[#7972AE]">→</i>
+                    {hint} <i className="not-italic text-[#128EEF]">→</i>
                   </span>
                 </button>
               ))}
@@ -148,11 +148,11 @@ export function VaariIntelligence({
             <p className="eyebrow mt-7">ADVANCED MODE</p>
             <button
               onClick={() => setActive("sadya")}
-              className={`mt-2 w-full rounded-2xl border p-4 text-left ${active === "sadya" ? "border-[#075A6D] bg-[#FFFDF9]" : "border-[#7972AE]"}`}
+              className={`mt-2 w-full rounded-2xl border p-4 text-left ${active === "sadya" ? "border-[#050505] bg-[#F8F8F8]" : "border-[#128EEF]"}`}
             >
               <span className="flex items-center justify-between">
                 <b>SADHYA MODE</b>
-                <i className="grid h-8 w-8 place-items-center rounded-full bg-[#16B6C9] not-italic">
+                <i className="grid h-8 w-8 place-items-center rounded-full bg-[#128EEF] not-italic">
                   {cards[4][4]}
                 </i>
               </span>
@@ -192,7 +192,7 @@ function Active(p: {
 }) {
   if (!p.active)
     return (
-      <div className="panel mt-5 rounded-3xl p-6 text-sm text-[#075A6D]">
+      <div className="panel mt-5 rounded-3xl p-6 text-sm text-[#050505]">
         <p className="eyebrow">ACTIVE EXPERIMENT</p>
         <p className="mt-2">
           Choose an experiment to begin an unnecessarily serious calculation.
@@ -239,7 +239,7 @@ function Active(p: {
           return (
             <div key={i} className="flex-1 text-center">
               <div
-                className="mx-auto bg-[#FFB8A6]"
+                className="mx-auto bg-[#F5009F]"
                 style={{ height: `${Math.max(8, (g / p.rice) * 100)}px` }}
               />
               <small>
@@ -294,22 +294,22 @@ function TakePanel({
           <button
             onClick={() => setHunger(x)}
             key={x}
-            className={`rounded-full border px-3 py-2 text-[10px] font-bold ${hunger === x ? "border-[#7972AE] bg-[#FFFDF9] text-[#075A6D]" : "border-[#d7d1c7]"}`}
+            className={`rounded-full border px-3 py-2 text-[10px] font-bold ${hunger === x ? "border-[#128EEF] bg-[#F8F8F8] text-[#050505]" : "border-[#d7d1c7]"}`}
           >
             {x}
           </button>
         ))}
       </div>
       <div className="mt-5 grid grid-cols-3 gap-2 text-center">
-        <div className="rounded-xl bg-[#FFFDF9] p-3">
-          <b className="block text-2xl text-[#075A6D]">{servings.toFixed(1)}</b>
+        <div className="rounded-xl bg-[#F8F8F8] p-3">
+          <b className="block text-2xl text-[#050505]">{servings.toFixed(1)}</b>
           VAARIS
         </div>
-        <div className="rounded-xl bg-[#FFFDF9] p-3">
-          <b className="block text-2xl text-[#7972AE]">{grams}g</b>SERVING
+        <div className="rounded-xl bg-[#F8F8F8] p-3">
+          <b className="block text-2xl text-[#128EEF]">{grams}g</b>SERVING
         </div>
         <div className="rounded-xl bg-[#F5F0E7] p-3">
-          <b className="block text-2xl text-[#075A6D]">{remaining}g</b>REMAINS
+          <b className="block text-2xl text-[#050505]">{remaining}g</b>REMAINS
         </div>
       </div>
       <div className="mt-5 border-t border-[#e5d9cc] pt-4">
@@ -318,7 +318,7 @@ function TakePanel({
           <span>{observed}g / vaari</span>
         </div>
         <input
-          className="mt-3 w-full accent-[#7972AE]"
+          className="mt-3 w-full accent-[#128EEF]"
           type="range"
           min="75"
           max="125"
@@ -329,13 +329,13 @@ function TakePanel({
           }}
         />
         <div className="mt-3 flex items-center justify-between gap-3">
-          <p className="text-[11px] text-[#075A6D]">
+          <p className="text-[11px] text-[#050505]">
             Weighed a real vaari once? Save this correction and future serving
             calculations will use it.
           </p>
           <button
             onClick={save}
-            className="shrink-0 rounded-full bg-[#075A6D] px-3 py-2 text-[10px] font-black text-white"
+            className="shrink-0 rounded-full bg-[#050505] px-3 py-2 text-[10px] font-black text-white"
           >
             {saved ? "SAVED ✓" : "SAVE BASELINE"}
           </button>
@@ -376,13 +376,13 @@ function Sadya({
       <div className="mb-4 flex gap-2">
         <button
           onClick={() => setView("map")}
-          className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "map" ? "bg-[#075A6D] text-white" : "border"}`}
+          className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "map" ? "bg-[#050505] text-white" : "border"}`}
         >
           SURFACE MAP
         </button>
         <button
           onClick={() => setView("plan")}
-          className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "plan" ? "bg-[#075A6D] text-white" : "border"}`}
+          className={`rounded-full px-3 py-1 text-[10px] font-bold ${view === "plan" ? "bg-[#050505] text-white" : "border"}`}
         >
           SERVING PLAN
         </button>
@@ -390,18 +390,18 @@ function Sadya({
       {view === "map" ? (
         <>
           <div className="grid grid-cols-2 gap-3">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-[#075A6D] p-3 text-white">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-[#050505] p-3 text-white">
               <p className="text-[9px] font-bold tracking-widest">
                 SADHYA MAP · {highlight.toUpperCase()}
               </p>
               <i
-                className={`absolute left-[26%] top-[34%] h-[38%] w-[42%] rounded-full bg-[#FFFDF9] transition ${highlight !== "rice" ? "opacity-35" : "ring-2 ring-[#16B6C9]"}`}
+                className={`absolute left-[26%] top-[34%] h-[38%] w-[42%] rounded-full bg-[#F8F8F8] transition ${highlight !== "rice" ? "opacity-35" : "ring-2 ring-[#128EEF]"}`}
               />
               <i
-                className={`absolute right-4 top-6 h-7 w-7 rounded-full bg-[#ef8c3c] transition ${highlight !== "other" ? "opacity-35" : "ring-2 ring-[#16B6C9]"}`}
+                className={`absolute right-4 top-6 h-7 w-7 rounded-full bg-[#ef8c3c] transition ${highlight !== "other" ? "opacity-35" : "ring-2 ring-[#128EEF]"}`}
               />
               <i
-                className={`absolute bottom-5 left-5 h-5 w-10 rounded-full bg-[#16B6C9] transition ${highlight !== "free" ? "opacity-35" : "ring-2 ring-[#16B6C9]"}`}
+                className={`absolute bottom-5 left-5 h-5 w-10 rounded-full bg-[#128EEF] transition ${highlight !== "free" ? "opacity-35" : "ring-2 ring-[#128EEF]"}`}
               />
               <small className="absolute bottom-2 left-3">
                 Tap legend to inspect region
@@ -431,7 +431,7 @@ function Sadya({
               <button
                 key={key}
                 onClick={() => setHighlight(key)}
-                className={`rounded-lg border p-2 ${highlight === key ? "border-[#075A6D] bg-[#FFFDF9]" : ""}`}
+                className={`rounded-lg border p-2 ${highlight === key ? "border-[#050505] bg-[#F8F8F8]" : ""}`}
               >
                 {key.toUpperCase()}
                 <br />
@@ -439,16 +439,16 @@ function Sadya({
               </button>
             ))}
           </div>
-          <div className="mt-4 rounded-xl border border-[#16B6C9] bg-[#FFFDF9] p-3">
+          <div className="mt-4 rounded-xl border border-[#128EEF] bg-[#F8F8F8] p-3">
             <div className="flex items-center justify-between gap-3">
               <div><p className="eyebrow">SERVING SURFACE SIMULATOR</p><p className="mt-1 text-xs">Simulate one more vaari before committing it to the leaf.</p></div>
-              <button onClick={()=>setSimulatedVaaris(value=>value>=3?0:value+1)} className="rounded-full bg-[#075A6D] px-3 py-2 text-[10px] font-black text-white">{simulatedVaaris>=3?"RESET LEAF":"ADD VAARI +"}</button>
+              <button onClick={()=>setSimulatedVaaris(value=>value>=3?0:value+1)} className="rounded-full bg-[#050505] px-3 py-2 text-[10px] font-black text-white">{simulatedVaaris>=3?"RESET LEAF":"ADD VAARI +"}</button>
             </div>
-            <div className="mt-3 flex items-center gap-2 text-xs"><span className="grid h-7 w-7 place-items-center rounded-full bg-[#16B6C9] font-black text-[#303630]">{simulatedVaaris}</span><span>{simulatedVaaris===0?"Leaf is waiting patiently.":simulatedVaaris===1?"One extra vaari: still socially acceptable.":simulatedVaaris===2?"Choru load is becoming a decision.":"Maximum simulated commitment reached."}</span></div>
+            <div className="mt-3 flex items-center gap-2 text-xs"><span className="grid h-7 w-7 place-items-center rounded-full bg-[#128EEF] font-black text-[#050505]">{simulatedVaaris}</span><span>{simulatedVaaris===0?"Leaf is waiting patiently.":simulatedVaaris===1?"One extra vaari: still socially acceptable.":simulatedVaaris===2?"Choru load is becoming a decision.":"Maximum simulated commitment reached."}</span></div>
           </div>
         </>
       ) : (
-        <div className="rounded-xl bg-[#FFFDF9] p-4 text-xs">
+        <div className="rounded-xl bg-[#F8F8F8] p-4 text-xs">
           <p className="eyebrow">SADHYA PLAN · YOUR {vaari}G VAARI</p>
           <div className="mt-3 grid grid-cols-2 gap-y-2">
             <span>Parippu</span>
@@ -462,7 +462,7 @@ function Sadya({
           </div>
           <button
             onClick={() => setReserve(!reserve)}
-            className={`mt-4 w-full rounded-lg p-3 text-left font-bold ${reserve ? "bg-[#075A6D] text-white" : "bg-[#FFFDF9] text-[#7e2f38]"}`}
+            className={`mt-4 w-full rounded-lg p-3 text-left font-bold ${reserve ? "bg-[#050505] text-white" : "bg-[#F8F8F8] text-[#7e2f38]"}`}
           >
             PAYASAM RESERVE .7 VAARI · {reserve ? "PROTECTED" : "COMPROMISED"}
             <small className="ml-2 font-normal">
@@ -472,7 +472,7 @@ function Sadya({
         </div>
       )}
       <div className="mt-4 border-t pt-3 text-xs">
-        <span className="text-[#075A6D]">
+        <span className="text-[#050505]">
           PAPPADAM SPACE {free > 18 ? "AVAILABLE" : "TIGHT"} · ESTIMATED SADHYA
           COMPATIBILITY {compat}%
         </span>
@@ -489,7 +489,7 @@ function Score({ label, value }: { label: string; value: number }) {
       </div>
       <div className="mt-1 h-2 rounded-full bg-[#e7e2d9]">
         <div
-          className="h-full rounded-full bg-[#075A6D]"
+          className="h-full rounded-full bg-[#050505]"
           style={{ width: `${value}%` }}
         />
       </div>

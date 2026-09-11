@@ -1,0 +1,10 @@
+.git
+.next
+.next-build
+node_modules
+npm-debug.log*
+.env
+.env.*
+!.env.example
+README.md
+public/docs

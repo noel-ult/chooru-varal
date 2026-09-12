@@ -62,8 +62,7 @@ For Software:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*The video should show the calibration-to-verdict workflow.*
+https://youtu.be/7rtLSQfK2fI?si=7zplXPAXvSs_LmSx
 
 # Additional Demos
 - Use the in-app **Try Demo** button for a local sample run.

@@ -1,7 +1,6 @@
 # chooru-varal source reference
 
-
-Source reviewed: [`0a1f1e6b8903`](https://github.com/noel-ult/chooru-varal/commit/0a1f1e6b8903d1c2caa1468a60b6a697a1b1e024).
+Source reviewed: [`57dacbabde33`](https://github.com/noel-ult/chooru-varal/commit/57dacbabde3379d9c7644898f20e4bc67086e0ec).
 
 This reference records the checked-in source, scripts, configuration names, and route declarations. It is a navigation aid; service availability and successful test execution require separate verification.
 
@@ -37,7 +36,10 @@ Names below are declared by source or example files. Example-only entries may be
 
 Historical plans/reports describe their own revision; use current source when they disagree.
 
+- [CONTRIBUTING.md](../CONTRIBUTING.md)
 - [README.md](../README.md)
+- [docs/PROJECT_GUIDE.md](../docs/PROJECT_GUIDE.md)
+- [docs/REFERENCE.md](../docs/REFERENCE.md)
 
 ## Source and configuration map
 
